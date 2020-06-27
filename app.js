@@ -7,10 +7,7 @@ const mongoose = require('mongoose');
 const app = express();
 app.set('view engine', 'ejs');
 
-mongoose.connect('mongodb+srv://admin:admin@cluster0-gn8bp.mongodb.net/todolistDB?retryWrites=true&w=majority', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect('mongodb://localhost:27017/todolistDB', {useNewUrlParser: true, useUnifiedTopology: true});
 
 //Schema Creation
 const itemsSchema = new mongoose.Schema({
